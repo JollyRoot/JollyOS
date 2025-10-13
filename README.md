@@ -22,15 +22,15 @@ It coordinates subsystems, communicates with SpyglassPy and smuggles data throug
 ---
 
 ### ⚓ Command Motto
-> “Our bots don’t reboot — they rally.  
-> Our packets don’t drop — they dive.  
-> Our code doesn’t crash — it mutinies and returns stronger.”
+> Our bots don’t reboot => they rally.  
+> Our packets don’t drop => they dive.  
+> Our code doesn’t crash => it mutinies and returns stronger.”
 
 ---
 
 ### 💀 Credits
-**Captain:** Thomas “JollyRoot” Barrett  
-**First Mate:** CoChe.exe Bytecode Chaos  
+**Captain:** Thomas “JollyRoot” Barrett => sworn enemy of lag
+**First Mate:** Bytebeard => drinker of voltage, keeper of logs
 **Fleet:** The Open Source Pirates of Innovation
 
 ---
