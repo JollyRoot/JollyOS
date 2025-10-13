@@ -6,8 +6,8 @@
 ---
 
 ### ⚙️ What is JollyOS?
-JollyOS is the modular command system that powers the entire No Quarter Robotics fleet — from TankBots to turrets.  
-It coordinates subsystems, communicates with SpyglassPy, and smuggles data through RumRunnerNet.
+JollyOS is the modular command system that powers the entire No Quarter Robotics fleet, from TankBots to turrets.  
+It coordinates subsystems, communicates with SpyglassPy and smuggles data through RumRunnerNet.
 
 ---
 
