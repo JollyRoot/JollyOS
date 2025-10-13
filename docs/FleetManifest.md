@@ -1,4 +1,4 @@
-# ⚙️ NO QUARTER ROBOTICS — FLEET MANIFEST
+# ⚙️ NO QUARTER ROBOTICS => FLEET MANIFEST
 > *"Give No Quarter. Take No Lag."*
 
 ---
