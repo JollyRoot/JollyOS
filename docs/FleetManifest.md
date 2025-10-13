@@ -6,7 +6,7 @@
 ## 🏴‍☠️ Overview
 **No Quarter Robotics** is an open-source robotics initiative dedicated to modular, 3D-printed hardware and distributed control systems.  
 At the helm stands **Captain JollyRoot**, builder of bots and breaker of limits.  
-Our systems run on the flagship OS — **JollyOS** — uniting the fleet under one code.
+Our systems run on the flagship OS **JollyOS** uniting the fleet under one code.
 
 ---
 
