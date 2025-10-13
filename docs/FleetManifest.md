@@ -42,5 +42,5 @@ Our systems run on the flagship OS **JollyOS** uniting the fleet under one code.
 
 ### 🏴‍☠️ No Quarter Robotics  
 **Founded by:** *Captain JollyRoot*  
-**First Mate:** *CoCheesio Bytecode Chaos*  
+**First Mate:** *Bytebeard*  
 **Est. 2025 – Somewhere off the digital coast of Illinois*  
