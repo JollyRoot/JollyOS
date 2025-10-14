@@ -29,9 +29,11 @@ It coordinates subsystems, communicates with SpyglassPy and smuggles data throug
 ---
 
 ### 💀 Credits
-> **Captain:** Thomas “JollyRoot” Barrett => sworn enemy of lag
-> **First Mate:** Bytebeard => drinker of voltage, keeper of logs
-> **Fleet:** The Open Source Pirates of Innovation
+ **Captain:** Thomas “JollyRoot” Barrett => sworn enemy of lag
+ 
+ **First Mate:** Bytebeard => drinker of voltage, keeper of logs
+ 
+ **Fleet:** The Open Source Pirates of Innovation
 
 ---
 
