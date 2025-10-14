@@ -1,23 +1,45 @@
 #!/usr/bin/env python3
 """
-RumRunner_Sender — sends a small packet to RumRunner_Receiver
-for proof of concept over TCP.
+RumRunner_Sender — transmits live SpyGlass LiDAR readings
+over RumRunnerNet using the RumLine protocol.
 """
 
-import socket, time
+import sys, os, time, socket
+sys.path.append(os.path.expanduser("~/Desktop/JollyOS"))
 
-HOST = "raspberrypi4.local"   # or IP like "192.168.1.42"
+from fleet.shared import RumLine
+from fleet.SpyGlass.Lidar import TfLunaTest
+
+HOST = "10.0.0.111"  # Pi 4B Receiver
 PORT = 5005
 
 def main():
-    msg = f"Ahoy from RumRunner_Sender at {time.time()}"
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        print(f"[net] connecting to {HOST}:{PORT} ...")
-        s.connect((HOST, PORT))
-        s.sendall(msg.encode("utf-8"))
-        print(f"[net] sent: {msg}")
-        reply = s.recv(1024).decode("utf-8")
-        print(f"[net] reply: {reply}")
+    print("[rumrunner] sender initialized, starting 1-second loop…")
+    while True:
+        distance = TfLunaTest.get_latest_avg()
+        if distance is None:
+            print("[spyglass] waiting for LiDAR data…")
+            time.sleep(1)
+            continue
+
+        packet = RumLine.cast_message("SpyGlass", {
+            "distance_cm": distance,
+            "timestamp": time.time()
+        })
+
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.settimeout(2.0)
+                s.connect((HOST, PORT))
+                s.sendall(RumLine.encode(packet))
+                print(f"[net] sent packet: {packet}")
+                reply = s.recv(1024)
+                if reply:
+                    print(f"[net] reply: {reply.decode('utf-8')}")
+        except (ConnectionRefusedError, TimeoutError, OSError) as e:
+            print(f"[warn] connection failed: {e}")
+
+        time.sleep(1.0)  # one message per second
 
 if __name__ == "__main__":
     main()
